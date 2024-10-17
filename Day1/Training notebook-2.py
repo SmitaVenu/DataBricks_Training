@@ -86,3 +86,7 @@ df2_users.display()
 # COMMAND ----------
 
 df3_users=df2_users.withColumn("mobile_phone",col("Mobile.mobile")).withColumn("mobile_home",col("Mobile.home")).withColumn("courses",explode("courses")).drop("Mobile")
+
+# COMMAND ----------
+
+df3_users.display()
